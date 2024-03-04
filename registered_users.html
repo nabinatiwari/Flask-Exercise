@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('registered_users') }}">Registered Users</a></li>
+        </ul>
+    </nav>
+    <h1>List of Registered Users</h1>
+    <ul>
+        {% for name, org in registered_users.items() %}
+            <li>{{ name }} - {{ org }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
